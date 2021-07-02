@@ -1,0 +1,4 @@
+#value_indexed
+#enum
+#include <linux/landlock.h>
+LANDLOCK_RULE_PATH_BENEATH	1
