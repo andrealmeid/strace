@@ -111,15 +111,27 @@
 	_Pragma("clang diagnostic ignored \"-Winitializer-overrides\"");
 #  define DIAG_POP_IGNORE_OVERRIDE_INIT					\
 	_Pragma("clang diagnostic pop");
+#  define DIAG_PUSH_IGNORE_NONNULL					\
+	_Pragma("clang diagnostic push");				\
+	_Pragma("clang diagnostic ignored \"-Wnonnull\"");
+#  define DIAG_POP_IGNORE_NONNULL					\
+	_Pragma("clang diagnostic pop");
 # elif GNUC_PREREQ(4, 2)
 #  define DIAG_PUSH_IGNORE_OVERRIDE_INIT					\
 	_Pragma("GCC diagnostic push");					\
 	_Pragma("GCC diagnostic ignored \"-Woverride-init\"");
 #  define DIAG_POP_IGNORE_OVERRIDE_INIT					\
 	_Pragma("GCC diagnostic pop");
+#  define DIAG_PUSH_IGNORE_NONNULL					\
+	_Pragma("GCC diagnostic push");					\
+	_Pragma("GCC diagnostic ignored \"-Wnonnull\"");
+#  define DIAG_POP_IGNORE_NONNULL					\
+	_Pragma("GCC diagnostic pop");
 # else
 #  define DIAG_PUSH_IGNORE_OVERRIDE_INIT	/* empty */
 #  define DIAG_POP_IGNORE_OVERRIDE_INIT	/* empty */
+#  define DIAG_PUSH_IGNORE_NONNULL	/* empty */
+#  define DIAG_POP_IGNORE_NONNULL	/* empty */
 # endif
 
 # if GNUC_PREREQ(6, 0)
