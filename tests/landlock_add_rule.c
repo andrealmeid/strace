@@ -15,21 +15,7 @@
 #include <stdint.h>
 #include <unistd.h>
 
-#ifdef HAVE_LINUX_LANDLOCK_H
-# include <linux/landlock.h>
-#else
-struct landlock_path_beneath_attr {
-	uint64_t allowed_access;
-	int32_t  parent_fd;
-} ATTRIBUTE_PACKED;
-
-enum { LANDLOCK_RULE_PATH_BENEATH = 1 };
-
-# include "xlat.h"
-# define XLAT_MACROS_ONLY
-#  include "xlat/landlock_ruleset_access_fs.h"
-# undef XLAT_MACROS_ONLY
-#endif
+#include <linux/landlock.h>
 
 #ifndef SKIP_IF_PROC_IS_UNAVAILABLE
 # define SKIP_IF_PROC_IS_UNAVAILABLE

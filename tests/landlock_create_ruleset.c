@@ -15,18 +15,7 @@
 #include <stdint.h>
 #include <unistd.h>
 
-#ifdef HAVE_LINUX_LANDLOCK_H
-# include <linux/landlock.h>
-#else
-struct landlock_ruleset_attr {
-	uint64_t handled_access_fs;
-};
-
-# include "xlat.h"
-# define XLAT_MACROS_ONLY
-#  include "xlat/landlock_ruleset_access_fs.h"
-# undef XLAT_MACROS_ONLY
-#endif
+#include <linux/landlock.h>
 
 #ifndef RETVAL_INJECTED
 # define RETVAL_INJECTED 0

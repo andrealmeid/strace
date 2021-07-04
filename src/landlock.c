@@ -7,9 +7,7 @@
 
 #include "defs.h"
 
-#ifdef HAVE_LINUX_LANDLOCK_H
-# include <linux/landlock.h>
-#endif
+#include <linux/landlock.h>
 
 #include "xlat/landlock_create_ruleset_flags.h"
 #include "xlat/landlock_rule_types.h"

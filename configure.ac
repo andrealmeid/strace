@@ -385,7 +385,6 @@ AC_CHECK_HEADERS(m4_normalize([
 	gcov.h
 	iconv.h
 	mqueue.h
-	linux/landlock.h
 	netinet/sctp.h
 	netipx/ipx.h
 	paths.h
