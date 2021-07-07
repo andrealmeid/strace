@@ -126,6 +126,7 @@ libstrace_a_SOURCES =	\
 	fstatfs.c \
 	fstatfs64.c \
 	futex.c		\
+	futex2.c		\
 	gcc_compat.h	\
 	get_personality.c \
 	get_personality.h \

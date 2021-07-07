@@ -27,3 +27,5 @@
 [BASE_NR + 440] = { 5,	TD,		SEN(process_madvise),		"process_madvise"	},
 [BASE_NR + 441] = { 6,	TD,		SEN(epoll_pwait2),		"epoll_pwait2"		},
 [BASE_NR + 442] = { 5,	TD|TF,		SEN(mount_setattr),		"mount_setattr"		},
+[BASE_NR + 447] = { 4,	0,		SEN(futex_wait),		"futex_wait"		},
+[BASE_NR + 448] = { 4,	0,		SEN(futex_wake),		"futex_wake"		},
